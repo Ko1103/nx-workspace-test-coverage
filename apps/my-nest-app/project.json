@@ -21,6 +21,24 @@
           "buildTarget": "my-nest-app:build:production"
         }
       }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/my-nest-app"],
+      "options": {
+        "jestConfig": "apps/my-nest-app/jest.config.js",
+        "passWithNoTests": true,
+        "clearCache": true
+      }
+    },
+    "test:cov": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/my-nest-app"],
+      "options": {
+        "jestConfig": "apps/my-nest-app/jest.config.js",
+        "coverage": true,
+        "clearCache": true
+      }
     }
   }
 }

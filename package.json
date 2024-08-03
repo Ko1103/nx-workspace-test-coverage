@@ -2,7 +2,9 @@
   "name": "@my-workspace/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "test:cov": "npx nx run-many --target=test --all"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
