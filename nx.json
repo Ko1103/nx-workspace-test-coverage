@@ -36,6 +36,5 @@
       },
       "exclude": ["apps/my-workspace-e2e/**/*", "apps/my-nest-app-e2e/**/*"]
     }
-  ],
-  "nxCloudAccessToken": "MGEwNDRjY2ItNGQ0ZS00MGZjLThjZTEtMmFkMTg1OTAwYjM2fHJlYWQtd3JpdGU="
+  ]
 }

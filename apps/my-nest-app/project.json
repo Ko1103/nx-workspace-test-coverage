@@ -28,16 +28,17 @@
       "options": {
         "jestConfig": "apps/my-nest-app/jest.config.js",
         "passWithNoTests": true,
-        "clearCache": true
+        "ci": true,
+        "verbose": true
       }
     },
-    "test:cov": {
+    "coverage": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/my-nest-app"],
       "options": {
         "jestConfig": "apps/my-nest-app/jest.config.js",
-        "coverage": true,
-        "clearCache": true
+        "passWithNoTests": true,
+        "coverage": true
       }
     }
   }
