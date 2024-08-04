@@ -39,4 +39,5 @@ jobs:
         with:
           test-script: npm run test:cov
           skip-step: install
+          annotations: coverage # failed-testsも実行するとGitHub Actinonが最後失敗になるのでやめる
 
