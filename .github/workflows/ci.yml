@@ -5,9 +5,10 @@ on:
       branches:
         - main
 
-permissions:
-  actions: read
-  contents: read
+# Skip job run if PR updated
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 
 jobs:
   main:
