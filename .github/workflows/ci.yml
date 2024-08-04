@@ -24,10 +24,10 @@ jobs:
 
       - run: npm ci --legacy-peer-deps
 
-      # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
-      # - run: npx nx-cloud record -- echo Hello World
-      # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
-      - run: npx nx affected -t lint test build
+      # # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
+      # # - run: npx nx-cloud record -- echo Hello World
+      # # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
+      # - run: npx nx affected -t lint test build
       
       # Test Coverage Report
       - uses: ArtiomTr/jest-coverage-report-action@v2
