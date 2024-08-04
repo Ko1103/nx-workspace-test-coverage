@@ -1,16 +1,22 @@
 name: CI
 
 on:
-  pull_request_target:
-      branches:
-        - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      # branches:
+      #   - main
 
-permissions:
-  actions: read
-  contents: read
+# Skip job run if PR updated
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
 
 jobs:
   main:
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
