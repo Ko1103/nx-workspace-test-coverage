@@ -38,7 +38,10 @@
       "options": {
         "jestConfig": "apps/my-nest-app/jest.config.js",
         "passWithNoTests": true,
-        "coverage": true
+        "coverage": true,
+        "json": true,
+        "testLocationInResults": true,
+        "outputFile": "{workspaceRoot}/report.json"
       }
     }
   }
