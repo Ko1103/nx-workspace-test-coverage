@@ -1,9 +1,12 @@
 name: CI
 
 on:
-  pull_request_target:
-      branches:
-        - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      # branches:
+      #   - main
 
 # Skip job run if PR updated
 concurrency:
@@ -13,9 +16,7 @@ concurrency:
 jobs:
   main:
     permissions:
-      checks: write
       pull-requests: write
-      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -38,6 +39,5 @@ jobs:
       # Test Coverage Report
       - uses: ArtiomTr/jest-coverage-report-action@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           test-script: npm run test:cov
 
