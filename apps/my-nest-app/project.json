@@ -40,8 +40,15 @@
         "passWithNoTests": true,
         "coverage": true,
         "json": true,
-        "testLocationInResults": true,
-        "outputFile": "{workspaceRoot}/report.json"
+        "testLocationInResults": true
+      }
+    },
+    "test:clear": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/my-nest-app"],
+      "options": {
+        "jestConfig": "apps/my-nest-app/jest.config.js",
+        "clearCache": true
       }
     }
   }
